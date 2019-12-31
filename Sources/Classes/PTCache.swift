@@ -9,29 +9,29 @@
 
 import Foundation
 
-final class PTCache<Key: Hashable, Value> {
+public final class PTCache<Key: Hashable, Value> {
     private let wrapped = NSCache<WrappedKey, Entry>()
     private let dateProvider: () -> Date
     private let entryLifetime: TimeInterval
     
-    init (dateProvider: @escaping ()->Date = Date.init, lifetime: TimeInterval = 12 * 60 * 60) {
+    public init (dateProvider: @escaping ()->Date = Date.init, lifetime: TimeInterval = 12 * 60 * 60) {
         self.dateProvider = dateProvider
         self.entryLifetime = lifetime
     }
     
-    func insert (_ value: Value, for key: Key) {
+    public func insert (_ value: Value, for key: Key) {
         let date = dateProvider().addingTimeInterval(entryLifetime)
         let entry = Entry(value, expires: date)
         wrapped.setObject(entry, forKey: WrappedKey(key))
     }
     
-    func value (for key: Key) -> Value? {
+    public func value (for key: Key) -> Value? {
         guard let entry = wrapped.object(forKey: WrappedKey(key)) else { return nil }
         guard dateProvider() < entry.expires else { remove(valueFor: key); return nil }
         return entry.value
     }
     
-    func remove (valueFor key: Key) {
+    public func remove (valueFor key: Key) {
         wrapped.removeObject(forKey: WrappedKey(key))
     }
 }
