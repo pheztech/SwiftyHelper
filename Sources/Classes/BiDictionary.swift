@@ -8,20 +8,22 @@
 
 import Foundation
 
-public class BiDictionary<Key, Value>: NSMutableDictionary {
+public class BiDictionary<Key, Value>: NSObject {
+	private var dictionary = NSMutableDictionary()
+	
 	public func set (_ value: Value, for key: Key) {
-		self[key] = value
+		dictionary[key] = value
 	}
 	
 	public func remove (for key: Key) {
-		super.removeObject(forKey: key)
+		dictionary.removeObject(forKey: key)
 	}
 	
 	public func remove (for keys: [Key]) {
-		super.removeObjects(forKeys: keys)
+		dictionary.removeObjects(forKeys: keys)
 	}
 	
 	public func allKeys (for value: Value) -> [Key] {
-		super.allKeys(for: value) as! [Key]
+		dictionary.allKeys(for: value) as! [Key]
 	}
 }
