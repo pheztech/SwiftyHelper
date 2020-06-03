@@ -11,9 +11,6 @@ let package = Package(
     products: [
         .library(name: "SwiftyHelper", targets: [ "SwiftyHelper" ]),
     ],
-    dependencies: [
-//         .package(url: "", from: "1.0.0"),
-    ],
     targets: [
         .target(name: "SwiftyHelper", dependencies: []),
 //        .testTarget(name: "SwiftyHelperTests", dependencies: ["SwiftyHelper"]),
