@@ -20,6 +20,7 @@ final public class PTCompression: NSObject {
         super.init()
     }
     
+	@available(macOS 10.12, iOS 11, *)
     public static func compress (_ data: Data) -> Data? {
         var sourceBuffer = Array(data)
         
@@ -30,6 +31,7 @@ final public class PTCompression: NSObject {
         return Data(bytesNoCopy: buffer, count: compressedSize, deallocator: .free)
     }
     
+	@available(macOS 10.12, iOS 11, *)
     public static func decompress (_ data: Data) -> Data? {
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 500)
         
