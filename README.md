@@ -14,23 +14,13 @@ Helpful wrappers of basic functions and lower level iOS frameworks
 
 [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift)
 
+## Attributions
+
+Forked [Keychain Wrapper](https://github.com/jrendel/SwiftKeychainWrapper) by jrendel
+
 ## Installation
 
-SwiftyHelper is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following lines to your Podfile:
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/KenLPham/Spec.git'
-platform :ios, '12.0'
-use_frameworks!
-
-target 'MyApp' do
-  # your other pod
-  # ...
-  pod 'PT+SwiftyHelper'
-end
-```
+The easiest way to use SwiftyHelper is through Swift Package Manager.
 
 ## Author
 
@@ -38,4 +28,4 @@ Ken Pham
 
 ## License
 
-Private Licence. See the LICENSE file for more info.
+MIT Licence. See the LICENSE file for more info.
