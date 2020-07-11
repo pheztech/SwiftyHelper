@@ -1,9 +1,6 @@
 # SwiftyHelper
 
-[![CI Status](https://img.shields.io/travis/KenLPham/CrossPeers.svg?style=flat)](https://travis-ci.org/KenLPham/CrossPeers)
-[![Version](https://img.shields.io/cocoapods/v/CrossPeers.svg?style=flat)](https://cocoapods.org/pods/CrossPeers)
 ![License](https://img.shields.io/github/license/pheztech/SwiftyHelper?style=flat-square)
-[![Platform](https://img.shields.io/cocoapods/p/CrossPeers.svg?style=flat)](https://cocoapods.org/pods/CrossPeers)
 ![Twitter](https://img.shields.io/twitter/follow/lilboipham?style=flat-square)
 
 ## Description
