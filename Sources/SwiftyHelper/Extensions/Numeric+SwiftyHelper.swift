@@ -6,7 +6,7 @@
 //  Copyright © 2020 Phez Technologies. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Integer
 public extension Int {
