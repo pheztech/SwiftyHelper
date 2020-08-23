@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension JSONDecoder {
+public extension JSONDecoder {
 	static var dependency: () -> JSONDecoder = JSONDecoder.init
 }
 
-extension JSONEncoder {
+public extension JSONEncoder {
 	static var dependency: () -> JSONEncoder = JSONEncoder.init
 }
