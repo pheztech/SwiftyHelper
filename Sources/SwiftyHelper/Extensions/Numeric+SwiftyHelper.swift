@@ -6,7 +6,11 @@
 //  Copyright © 2020 Phez Technologies. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+#else
+import Foundation
+#endif
 
 // MARK: - Integer
 public extension Int {
@@ -39,8 +43,10 @@ public extension Double {
 }
 
 // MARK: - CGFloat
+#if canImport(UIKit)
 public extension CGFloat {
 	var int: Int {
 		Int(self)
 	}
 }
+#endif
