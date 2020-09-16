@@ -16,6 +16,14 @@ public extension NumberFormatter {
 		
 		return formatter
 	}
+    
+    func string (from double: Double) -> String? {
+        self.string(from: double as NSNumber)
+    }
+    
+    func string (from int: Int) -> String? {
+        self.string(from: int as NSNumber)
+    }
 }
 
 public extension Locale {

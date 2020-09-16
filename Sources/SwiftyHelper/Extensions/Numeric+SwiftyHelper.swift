@@ -22,24 +22,24 @@ public extension Int {
 		Int16(self)
 	}
 	
+    #if canImport(UIKit)
 	var cgFloat: CGFloat {
 		CGFloat(self)
 	}
+    #endif
 }
 
 // MARK: - Double
 public extension Double {
-	var number: NSNumber {
-		NSNumber(value: self)
-	}
-	
 	var int: Int {
 		Int(self)
 	}
 	
-	var cgFloat: CGFloat {
-		CGFloat(self)
-	}
+    #if canImport(UIKit)
+    var cgFloat: CGFloat {
+        CGFloat(self)
+    }
+    #endif
 }
 
 // MARK: - CGFloat

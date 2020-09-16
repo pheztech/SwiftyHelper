@@ -13,6 +13,6 @@ let package = Package(
     ],
     targets: [
         .target(name: "SwiftyHelper", dependencies: []),
-//        .testTarget(name: "SwiftyHelperTests", dependencies: ["SwiftyHelper"]),
+        .testTarget(name: "SwiftyHelperTests", dependencies: ["SwiftyHelper"]),
     ]
 )
