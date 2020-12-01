@@ -1,7 +1,7 @@
 # SwiftyHelper
 
-![License](https://img.shields.io/github/license/pheztech/SwiftyHelper?style=flat-square)
-![Twitter](https://img.shields.io/twitter/follow/kenlpham?style=flat-square)
+[![License](https://img.shields.io/github/license/pheztech/SwiftyHelper?style=flat-square)](https://github.com/pheztech/SwiftyHelper/blob/spm/LICENSE.md)
+[![Twitter](https://img.shields.io/twitter/follow/kenlpham?style=flat-square)](https://twitter.com/kenlpham)
 
 ## Description
 
