@@ -15,16 +15,21 @@ public class PTGenerator: NSObject {
     }
 	
 	public static func secRandomString (ofLength length: Int) -> String? {
-		var data = Data(count: length)
-		
-		let result: Int32 = data.withUnsafeMutableBytes { buffer in
-			guard let pointer = buffer.bindMemory(to: UInt8.self).baseAddress else { return errSecMemoryError }
-			return SecRandomCopyBytes(kSecRandomDefault, length, pointer)
-		}
-		
-		if result == errSecSuccess {
-			return data.base64EncodedString()
-		}
-		return nil
+        // format data to 2 char HEX string
+        secRandomData(ofLength: length)?.compactMap { String(format: "%02x", $0) }.joined()
 	}
+    
+    public static func secRandomData (ofLength length: Int) -> Data? {
+        var data = Data(count: length)
+        
+        let result: Int32 = data.withUnsafeMutableBytes { buffer in
+            guard let pointer = buffer.bindMemory(to: UInt8.self).baseAddress else { return errSecMemoryError }
+            return SecRandomCopyBytes(kSecRandomDefault, length, pointer)
+        }
+        
+        if result == errSecSuccess {
+            return data
+        }
+        return nil
+    }
 }
