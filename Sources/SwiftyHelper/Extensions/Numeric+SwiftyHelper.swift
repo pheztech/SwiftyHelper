@@ -21,6 +21,10 @@ public extension Int {
 	var int16: Int16 {
 		Int16(self)
 	}
+    
+    var string: String {
+        String(self)
+    }
 	
     #if canImport(UIKit)
 	var cgFloat: CGFloat {
