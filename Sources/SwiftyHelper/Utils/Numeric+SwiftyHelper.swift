@@ -38,6 +38,10 @@ public extension Double {
 	var int: Int {
 		Int(self)
 	}
+    
+    var string: String {
+        String(self)
+    }
 	
     #if canImport(UIKit)
     var cgFloat: CGFloat {
@@ -52,5 +56,9 @@ public extension CGFloat {
 	var int: Int {
 		Int(self)
 	}
+    
+    var double: Double {
+        Double(self)
+    }
 }
 #endif
